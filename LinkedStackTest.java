@@ -33,12 +33,16 @@ public class LinkedStackTest {
 
   }
 
+
   @Test
-  public void testIsPop() {
+  public void testGetTopAndPop() {
     LinkedStack<String> aStack = new LinkedStack<String>();
     aStack.push("first");
+    assertEquals("first", aStack.getTop());
     aStack.push("second");
+    assertEquals("second", aStack.getTop());
     aStack.push("third");
+    assertEquals("third", aStack.getTop());
     assertEquals("third", aStack.pop());
     assertEquals("second", aStack.pop());
     assertFalse(aStack.isEmpty());
